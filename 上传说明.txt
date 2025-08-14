@@ -1,0 +1,38 @@
+# IPv6 VLESS+TCP+Reality 脚本上传与使用说明
+
+## Windows用户下载脚本
+
+如果您是Windows用户，想要下载脚本并传输到Linux服务器：
+
+1. 双击运行 `下载脚本.bat` 文件
+2. 脚本会自动从GitHub下载最新版本的fix_ipv6_vless.sh
+3. 下载完成后，将脚本传输到您的Linux服务器
+4. 在Linux服务器上运行 `bash fix_ipv6_vless.sh`
+
+## 上传到GitHub的步骤
+
+1. 确保您的电脑已安装Git。如果没有安装，请从 https://git-scm.com/downloads 下载并安装。
+
+2. 确保您有GitHub账号，并且已经登录。
+
+3. 如果您想上传到自己的GitHub仓库，请修改 `upload_to_github.bat` 文件中的仓库URL。
+   当前设置的仓库URL为：`https://github.com/1234sosuke/IPv6-VLESS-TCP-Reality.git`
+
+4. 双击运行 `upload_to_github.bat` 文件。
+
+5. 如果是首次使用Git，可能需要设置用户名和邮箱：
+   ```
+   git config --global user.name "您的GitHub用户名"
+   git config --global user.email "您的邮箱"
+   ```
+
+6. 上传完成后，您的脚本可以通过以下命令在Ubuntu系统上运行：
+   ```
+   curl -fsSL https://raw.githubusercontent.com/1234sosuke/IPv6-VLESS-TCP-Reality/main/fix_ipv6_vless.sh | bash
+   ```
+
+## 注意事项
+
+- 上传前请确保您对目标仓库有写入权限
+- 如果上传失败，请检查网络连接和GitHub状态
+- 首次上传可能需要输入GitHub用户名和密码（或个人访问令牌）

@@ -15,8 +15,8 @@ REM 重命名分支为main
 git branch -M main
 
 echo ======================================
-echo 请输入您的GitHub仓库URL（例如：https://github.com/username/repo.git）
-set /p REPO_URL="GitHub仓库URL: "
+echo 使用预设的GitHub仓库URL: https://github.com/1234sosuke/IPv6-VLESS-TCP-Reality.git
+set REPO_URL=https://github.com/1234sosuke/IPv6-VLESS-TCP-Reality.git
 
 REM 添加远程仓库
 git remote add origin %REPO_URL%
@@ -27,7 +27,7 @@ git push -u origin main
 echo ======================================
 echo 上传完成！
 echo 您的脚本现在可以通过以下命令在Ubuntu系统上运行：
-echo curl -fsSL https://raw.githubusercontent.com/用户名/仓库名/main/fix_ipv6_vless.sh | bash
+echo curl -fsSL https://raw.githubusercontent.com/1234sosuke/IPv6-VLESS-TCP-Reality/main/fix_ipv6_vless.sh | bash
 echo ======================================
 
 pause
