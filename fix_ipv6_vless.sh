@@ -22,7 +22,7 @@ systemctl stop xray 2>/dev/null || true
 echo "🔍 检测服务器IPv6地址..."
 
 # 获取所有IPv6地址，排除本地和临时地址
-IPV6_ADDRESSES=($(ip -6 addr show | grep 'inet6' | grep -v 'fe80' | grep -v '::1' | grep 'global\|deprecated' | awk '{print $2}' | cut -d'/' -f1 | head -10))
+IPV6_ADDRESSES=($(ip -6 addr show | grep 'inet6' | grep -v 'fe80' | grep -v '::1' | grep 'global\|deprecated' | awk '{print $2}' | cut -d'/' -f1))
 
 if [ ${#IPV6_ADDRESSES[@]} -eq 0 ]; then
     echo "❌ 未检测到IPv6地址！"
